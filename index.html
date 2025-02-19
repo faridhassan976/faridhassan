@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي - فريد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .name-bg {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+        .hidden-section {
+            display: none;
+        }
+        .content-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: absolute;
+            top: 15%;
+            right: 10%;
+        }
+        .content-text {
+            position: relative;
+            z-index: 1;
+        }
+        .nav-button, .contact-button {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover, .contact-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+        .image-hover-effect {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .image-hover-effect:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        /* From Uiverse.io by gharsh11032000 */ 
+.card {
+    bosition: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+@media screen and (max-width: 1024px) {
+    .content-box {
+        width: 80%;
+        right: 5%;
+        top: 20%;
+    }
+    .card {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        right: 5%;
+        top: 25%;
+    }
+    .content-text {
+        margin-bottom: 15px;
+    }
+    .card {
+        width: 220px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-box {
+        width: 95%;
+        right: 2.5%;
+        top: 30%;
+    }
+    .card {
+        width: 200px;
+        height: 140px;
+    }
+    .image-hover-effect {
+        width: 100%;
+    }
+    .nav-button, .contact-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+    </style>
+    <script>
+        function smoothScroll(targetId) {
+            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+        }
+        function showContact() {
+            let contactSection = document.getElementById("contact-section");
+            contactSection.style.display = "block";
+            smoothScroll("#contact-section");
+        }
+        function showQRCode() {
+            let qrCode = document.getElementById("whatsapp-qrcode");
+            qrCode.classList.toggle("hidden-section");
+            qrCode.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="p-6 flex justify-between items-center bg-gray-800">
+        <h1 class="text-2xl font-bold name-bg">فريد</h1>
+        <nav>
+            <ul class="flex gap-4">
+                <li><button onclick="smoothScroll('#about')" class="nav-button">عني</button></li>
+                <li><button onclick="smoothScroll('#projects')" class="nav-button">المشاريع</button></li>
+                <li><button onclick="showContact()" class="contact-button">تواصل معي</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div class="content-box w-2/3">
+            <div class="content-text text-right">
+                <h2 class="text-4xl font-bold mb-4">مرحبًا، أنا <span class="text-yellow-400">فريد</span></h2>
+                <p class="text-lg mb-6">مطور مواقع ويب، شغوف بتطوير الويب وبناء مشاريع احترافية</p>
+            </div>
+            <section>
+            <!-- From Uiverse.io by gharsh11032000 --> 
+<div class="card">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+    <div class="card__content">
+      <p class="card__title">ابدأ الوقتي
+      </p><p class="card__description">لازم تبدأ تتعلم أي مهارة مفيدة الوقتي من غير تأجيل. 
+        لإن لو فضلت تأجل كتيير مش هتعمل حاجه وهتضيع وقت هيفيدك في المستقبل.
+        استشير متخصصين في مجالك واتعلم بإحترافيه.</p>
+    </div>
+  </div>
+            </section>
+        
+            </div>
+        </section>
+    </body>
+    </html>
+    
+    
+    
+    
+        </div>
+    </section>
+
+    <section id="about" class="p-12 bg-gray-800">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-400">عني</h2>
+        <p class="text-lg">انا فريد حسن. عمري 17 سنه.
+            <br> شغوف بتصميم وتطوير المواقع وتحديدا الواجهة الاماميه
+            <br>هدفي هو التخصص في برمجة المواقع تحديدا <span class="text-yellow-400"> ( FULL-STACK )</span>
+            <br>بدات رحلة تعلمي في البرمجه منذ سنة 
+            <br>تعلمت في هذه الرحلة الكثير عن البرمجة ومازلت اتعلم لاصبح مبرمج محترف
+        </p>
+    </section>
+
+    <section id="projects" class="p-12">
+        <h2 class="text-3xl font-bold mb-6 text-yellow-400">مشروعي</h2>
+        <div class="bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2">مشروع تبرع</h3>
+            <p>هذا المشروع الهدف الاساسي منه هو التبرع للمحتاجين من حيث:
+                
+                    <li>إفطار صائم</li>
+                    <li>كسوة العيد</li>
+                    <li>سلة غذائية</li>
+                
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+                <img src="c:\Users\ASUS\Desktop\موقع شخصي\images\IMG-20250219-WA0022.jpg" alt="صورة المشروع 1" class="w-full rounded-lg image-hover-effect" width="200" height="500" >
+                <img src="images/IMG-20250219-WA0021.jpg" alt="صورة المشروع 2" class="w-full rounded-lg image-hover-effect">
+                <img src="images/IMG-20250219-WA0019.jpg" alt="صورة المشروع 3" class="w-full rounded-lg image-hover-effect">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="p-12 bg-gray-800 text-center hidden-section">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-400">تواصل معي</h2>
+        <div class="mt-6">
+            <button onclick="showQRCode()" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600">تواصل عبر واتساب</button>
+            <div id="whatsapp-qrcode" class="hidden-section mt-4">
+                <p>امسح الباركود للتواصل عبر واتساب:</p>
+                <img src="images/IMG-20250214-WA0002.jpg" alt="باركود واتساب" class="mx-auto mt-2 w-32">
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center p-4 bg-gray-900 mt-6">
+        <p>&copy; 2025 جميع الحقوق محفوظة - فريد</p>
+    </footer>
+</body>
+</html>                                                                                                  
