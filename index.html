@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موقعي الشخصي - فريد</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const circles = document.querySelectorAll(".circle");
+        
+        circles.forEach(circle => {
+            let percent = circle.getAttribute("data-percent");
+            circle.style.background = conic-gradient(orange ${percent}%, #222 0%);
+            let animation = circle.animate(
+                [{ transform: "scale(1)" }, { transform: "scale(1.1)" }, { transform: "scale(1)" }],
+                { duration: 1500, iterations: Infinity }
+            );
+        });
+    });
+</script>
+    </script>
     <style>
         body {
             background: rgba(0, 0, 0, 0.8);
@@ -163,7 +178,109 @@
         padding: 8px 12px;
     }
 }
+#whatsapp-channel {
+        padding: 3rem;
+        background-color: #1a202c;
+        text-align: center;
+        color: white;
+    }
+    .channel-container {
+        max-width: 768px;
+        margin: auto;
+        background: #2d3748;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    #whatsapp-channel h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #facc15;
+        margin-bottom: 1rem;
+    }
+    #whatsapp-channel p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    #whatsapp-link {
+        background-color: #22c55e;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+    #whatsapp-link:hover {
+        background-color: #16a34a;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
+    body {
+        background-color: #111;
+        color: white;
+        font-family: 'Cairo', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .skills {
+        padding: 40px 20px;
+    }
+
+    .skills h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: orange;
+    }
+
+    .skills-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        background: conic-gradient(orange 0%, #222 0%);
+        box-shadow: 0 0 15px rgba(255, 165, 0, 0.7), 0 0 30px rgba(255, 165, 0, 0.5);
+        position: relative;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .circle:hover {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 40px rgba(255, 165, 0, 0.9);
+        transform: scale(1.1);
+    }
+
+    .circle::after {
+        content: attr(data-percent) '%';
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .skill p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
     </style>
     <script>
         function smoothScroll(targetId) {
@@ -211,9 +328,10 @@
     </div>
   </div>
             </section>
-        
+          
             </div>
         </section>
+        
     </body>
     </html>
     
@@ -222,36 +340,36 @@
     
         </div>
     </section>
+    <section id="whatsapp-channel" class="p-12 bg-gray-900 text-center text-white">
+        <div class="max-w-3xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-yellow-400 mb-4">دليلك اليومي لحياة افضل</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                في عالم مليء بالمعلومات والضغوط اليومية، أصبح من الصعب الوصول إلى نصائح مفيدة وعملية تساعدنا على تحسين حياتنا واتخاذ قرارات صحيحة. لهذا السبب، أطلق <span class="text-yellow-400"> مازن ياسين</span> قناة واتساب للنصائح، حيث تقدم لك خلاصة التجارب والمعلومات المفيدة بطريقة بسيطة وسريعة، مباشرة على هاتفك!
+
+ماذا تقدم  القناة؟
+<br>
+<li>✅ نصائح يومية متنوعة: في مجالات مختلفة مثل تطوير الذات، الإنتاجية، الصحة، والعلاقات الاجتماعية.</li>
+<br>
+<li>✅ أفكار ملهمة: تساعدك على تحقيق أهدافك وزيادة ثقتك بنفسك.</li>
+<br>
+<li>✅ طرق مبتكرة لحل المشكلات: لأنه يؤمن أن كل مشكلة لها حل إذا تم التفكير فيها بطريقة صحيحة.</li>
+
+            </p>
+            <a href="https://whatsapp.com/channel/0029Va0DUQW1noz1vFCdsj2G" id=" #whatsapp-link" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition-all duration-300">
+                 قناة الواتس
+            </a>
+        </div>
+    </section>
 
     <section id="about" class="p-12 bg-gray-800">
         <h2 class="text-3xl font-bold mb-4 text-yellow-400">عني</h2>
-        <p class="text-lg">انا فريد حسن. عمري 17 سنه.
-            <br> شغوف بتصميم وتطوير المواقع وتحديدا الواجهة الاماميه
-            <br>هدفي هو التخصص في برمجة المواقع تحديدا <span class="text-yellow-400"> ( FULL-STACK )</span>
+        <p class="text-lg">انا <span class="text-yellow-400"> فريد حسن,</span> .عمري 17 سنة
+                        <br> شغوف بتصميم وتطوير المواقع وتحديدا الواجهة الاماميه
+            <br>هدفي هو التخصص في برمجة المواقع تحديدا <span class="text-yellow-400"> .( FULL-STACK )</span>
             <br>بدات رحلة تعلمي في البرمجه منذ سنة 
             <br>تعلمت في هذه الرحلة الكثير عن البرمجة ومازلت اتعلم لاصبح مبرمج محترف
         </p>
     </section>
-
-    <section id="projects" class="p-12">
-        <h2 class="text-3xl font-bold mb-6 text-yellow-400">مشروعي</h2>
-        <div class="bg-gray-800 p-6 rounded-lg">
-            <h3 class="text-2xl font-bold mb-2">مشروع تبرع</h3>
-            <p>هذا المشروع الهدف الاساسي منه هو التبرع للمحتاجين من حيث:
-                
-                    <li>إفطار صائم</li>
-                    <li>كسوة العيد</li>
-                    <li>سلة غذائية</li>
-                
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-            <img src="images/IMG-20250219-WA0022.jpg" alt="1 صورة المشروع" class="w-full rounded-ig image-hover-effect">
-                <img src="images/IMG-20250219-WA0021.jpg" alt="صورة المشروع 2" class="w-full rounded-lg image-hover-effect">
-                <img src="images/IMG-20250219-WA0019.jpg" alt="صورة المشروع 3" class="w-full rounded-lg image-hover-effect">
-            </div>
-        </div>
-    </section>
-
     <section id="contact-section" class="p-12 bg-gray-800 text-center hidden-section">
         <h2 class="text-3xl font-bold mb-4 text-yellow-400">تواصل معي</h2>
         <div class="mt-6">
@@ -262,9 +380,27 @@
             </div>
         </div>
     </section>
-
+    <section class="skills">
+        <h2>مهاراتي</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="circle" data-percent="95"></div>
+                <p>HTML</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percent="90"></div>
+                <p>CSS</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percent="95"></div>
+                <p>JavaScript</p>
+            </div>
+            
+        </div>
+    </section>
+    
     <footer class="text-center p-4 bg-gray-900 mt-6">
         <p>&copy; 2025 جميع الحقوق محفوظة - فريد</p>
     </footer>
 </body>
-</html>                                                                                                  
+</html>                                                                                                   
