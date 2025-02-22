@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موقعي الشخصي - فريد</title>
-    <script src="https://cdn.tailwindcss.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+
         <script>
     document.addEventListener("DOMContentLoaded", function() {
         const circles = document.querySelectorAll(".circle");
@@ -19,7 +20,7 @@
         });
     });
 </script>
-    </script>
+
     <style>
         body {
             background: rgba(0, 0, 0, 0.8);
@@ -408,7 +409,28 @@
     align-items: center; /* توسيط العنصر عموديًا */
     height: 100vh; /* جعل الكارت في منتصف الشاشة */
 }
+.videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
 
+        .video-box {
+            width: 320px;
+            height: 180px;
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
 
     </style>
     <script>
@@ -453,7 +475,7 @@
       <p class="card__title">ابدأ الوقتي
       </p><p class="card__description">لازم تبدأ تتعلم أي مهارة مفيدة الوقتي من غير تأجيل. 
         لإن لو فضلت تأجل كتيير مش هتعمل حاجه وهتضيع وقت هيفيدك في المستقبل.
-        استشير متخصصين في مجالك واتعلم بإحترافيه.</p>
+</p>
     </div>
   </div>
             </section>
@@ -467,6 +489,33 @@
     
     
     
+        </div>
+    </section>
+    <section id="about" class="p-12 bg-gray-800">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-400">عني</h2>
+        <p class="text-lg">انا <span class="text-yellow-400"> فريد حسن,</span> .عمري 17 سنة
+                        <br> شغوف بتصميم وتطوير المواقع وتحديدا الواجهة الاماميه
+            <br>هدفي هو التخصص في برمجة المواقع تحديدا <span class="text-yellow-400"> .( FULL-STACK )</span>
+            <br>بدات رحلة تعلمي في البرمجه منذ سنة 
+            <br>تعلمت في هذه الرحلة الكثير عن البرمجة ومازلت اتعلم لاصبح مبرمج محترف
+        </p>
+    </section>
+    <section class="skills">
+        <h2>مهاراتي</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="circle" data-percent="95"></div>
+                <p>HTML</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percent="90"></div>
+                <p>CSS</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percent="95"></div>
+                <p>JavaScript</p>
+            </div>
+            
         </div>
     </section>
     <section id="whatsapp-channel" class="p-12 bg-gray-900 text-center text-white">
@@ -490,44 +539,43 @@
         </div>
     </section>
 
-    <section id="about" class="p-12 bg-gray-800">
-        <h2 class="text-3xl font-bold mb-4 text-yellow-400">عني</h2>
-        <p class="text-lg">انا <span class="text-yellow-400"> فريد حسن,</span> .عمري 17 سنة
-                        <br> شغوف بتصميم وتطوير المواقع وتحديدا الواجهة الاماميه
-            <br>هدفي هو التخصص في برمجة المواقع تحديدا <span class="text-yellow-400"> .( FULL-STACK )</span>
-            <br>بدات رحلة تعلمي في البرمجه منذ سنة 
-            <br>تعلمت في هذه الرحلة الكثير عن البرمجة ومازلت اتعلم لاصبح مبرمج محترف
-        </p>
-    </section>
-    <section id="contact-section" class="p-12 bg-gray-800 text-center hidden-section">
-        <h2 class="text-3xl font-bold mb-4 text-yellow-400">تواصل معي</h2>
-        <div class="mt-6">
-            <button onclick="showQRCode()" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600">تواصل عبر واتساب</button>
-            <div id="whatsapp-qrcode" class="hidden-section mt-4">
-                <p>امسح الباركود للتواصل عبر واتساب:</p>
-                <img src="images/IMG-20250214-WA0002.jpg" alt="باركود واتساب" class="mx-auto mt-2 w-32">
-            </div>
+    
+   
+    
+   <section>
+    <div class="videos-container">
+        <div class="video-box">
+            <video controls>
+                <source src="c:\Users\ASUS\Desktop\موقع شخصي\images\سورة البقرة كاملة للشيخ د.ياسر الدوسري Surat Albaqra(720P_HD).mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
         </div>
-    </section>
-    <section class="skills">
-        <h2>مهاراتي</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <div class="circle" data-percent="95"></div>
-                <p>HTML</p>
-            </div>
-            <div class="skill">
-                <div class="circle" data-percent="90"></div>
-                <p>CSS</p>
-            </div>
-            <div class="skill">
-                <div class="circle" data-percent="95"></div>
-                <p>JavaScript</p>
-            </div>
-            
+        <div class="video-box">
+            <video controls>
+                <source src="c:\Users\ASUS\Desktop\موقع شخصي\images\سورة آل عمران كامله _ بصوت الشيخ ياسر الدوسري(720P_HD).mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
         </div>
-    </section>
-    <section>
+        <div class="video-box">
+            <video controls>
+                <source src="c:\Users\ASUS\Desktop\موقع شخصي\images\سورة الكهف ياسر الدوسري(720P_HD).mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+        </div>
+    </div>
+
+
+   </section>
+   <section id="contact-section" class="p-12 bg-gray-800 text-center hidden-section">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">تواصل معي</h2>
+    <div class="mt-6">
+        <button onclick="showQRCode()" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600">تواصل عبر واتساب</button>
+        <div id="whatsapp-qrcode" class="hidden-section mt-4">
+            <p>امسح الباركود للتواصل عبر واتساب:</p>
+            <img src="images/IMG-20250214-WA0002.jpg" alt="باركود واتساب" class="mx-auto mt-2 w-32">
+        </div>
+    </div>
+</section>
 
 
         <!-- From Uiverse.io by ayman-ashine --> 
