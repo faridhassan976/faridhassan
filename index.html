@@ -12,7 +12,8 @@
         
         circles.forEach(circle => {
             let percent = circle.getAttribute("data-percent");
-            circle.style.background = conic-gradient(orange ${percent}%, #222 0%);
+            circle.style.background = `conic-gradient(orange ${percent}%, #222 0%)`;
+
             let animation = circle.animate(
                 [{ transform: "scale(1)" }, { transform: "scale(1.1)" }, { transform: "scale(1)" }],
                 { duration: 1500, iterations: Infinity }
@@ -70,7 +71,10 @@
         }
         /* From Uiverse.io by gharsh11032000 */ 
 .card {
-    bosition: relative;
+    .my-class {
+    position: relative;
+}
+
   width: 300px;
   height: 200px;
   background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
@@ -211,7 +215,8 @@
         border-radius: 8px;
         font-weight: bold;
         text-decoration: none;
-        transition: background 0.3s;
+        transition: background-color 0.3s;
+
     }
     #whatsapp-link:hover {
         background-color: #16a34a;
@@ -431,6 +436,63 @@
             height: 100%;
             border-radius: 10px;
         }
+        /* تنسيق الزر */
+#showVideosBtn {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #737373; /* خلفية رمادية */
+    color: white; /* لون النص أبيض */
+    border: none;
+    cursor: pointer;
+    border-radius: 12px; /* حواف دائرية */
+    transition: 0.3s;
+    margin: 0px;
+    display: block;
+    width: 150px; /* جعل الزر مستطيلاً */
+    text-align: center;
+}
+
+#showVideosBtn:hover {
+    background-color: #666; /* تغيير لون الزر عند التمرير */
+}
+
+/* تصميم قسم الفيديوهات */
+#videosSection {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* تصميم كل فيديو */
+.video-container {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #564a6e, #ff6600);
+    box-shadow: 0 0 15px rgba(96, 104, 126, 0.8);
+    width: 280px; /* حجم ثابت للإطار */
+}
+
+/* الفيديو */
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+/* المقال أسفل الفيديو */
+.video-container p {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
 
     </style>
     <script>
@@ -447,6 +509,17 @@
             qrCode.classList.toggle("hidden-section");
             qrCode.scrollIntoView({ behavior: 'smooth' });
         }
+        document.addEventListener("DOMContentLoaded", function () {
+    var button = document.getElementById("showVideosBtn");
+    var section = document.getElementById("videosSection");
+
+    button.addEventListener("click", function () {
+        section.style.display = "block"; // فتح القسم إذا كان مخفيًا
+
+        // التمرير إلى القسم بسلاسة
+        section.scrollIntoView({ behavior: "smooth" });
+    });
+});
     </script>
 </head>
 <body class="bg-gray-900 text-white">
@@ -455,8 +528,8 @@
         <nav>
             <ul class="flex gap-4">
                 <li><button onclick="smoothScroll('#about')" class="nav-button">عني</button></li>
-            
                 <li><button onclick="showContact()" class="contact-button">تواصل معي</button></li>
+                <li><button id="showVideosBtn">قرآن</button></li>
             </ul>
         </nav>
     </header>
@@ -553,11 +626,43 @@
         </div>
     </div>
 </section>
-
-
+<div id="videosSection">
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250222-WA0020.mp4" controls></video>
+        <p>⚖️ ⏳</p>
+    </div>
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250222-WA0023.mp4" controls></video>
+        <p>😔🤲</p>
+    </div>
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250222-WA0022.mp4" controls></video>
+        <p>✨🛤️</p>
+    </div>
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250222-WA0015.mp4" controls></video>
+        <p>😔🤲</p>
+    </div>
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250222-WA0016.mp4" controls></video>
+        <p>🤲🕊️💙</p>
+    </div>
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250222-WA0019.mp4" controls></video>
+        <p>🌍🤲</p>
+    </div>
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250131-WA0008.mp4" controls></video>
+        <p>🤲🕊️</p>
+    </div>
+    <div class="video-container">
+        <video src="c:\Users\ASUS\Desktop\موقع شخصي\videos\VID-20250222-WA0014.mp4" controls></video>
+        <p>⏳🤲💪</p>
+    </div>
+    
         <!-- From Uiverse.io by ayman-ashine --> 
     <footer class="text-center p-4 bg-gray-900 mt-6">
         <p>&copy; 2025 جميع الحقوق محفوظة - فريد</p>
     </footer>
 </body>
-</html>                                                                                                   
+</html>            
