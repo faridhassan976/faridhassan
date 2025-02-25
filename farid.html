@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي - فريد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const circles = document.querySelectorAll(".circle");
+        
+        circles.forEach(circle => {
+            let percent = circle.getAttribute("data-percent");
+            circle.style.background = `conic-gradient(orange ${percent}%, #222 0%)`;
+
+            let animation = circle.animate(
+                [{ transform: "scale(1)" }, { transform: "scale(1.1)" }, { transform: "scale(1)" }],
+                { duration: 1500, iterations: Infinity }
+            );
+        });
+    });
+</script>
+<script></script>
+    
+    </script>
+
+    <style>
+        
+        body {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .stars {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: -1;
+}
+
+.stars::after,
+.stars::before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(white 1px, transparent 1%);
+    background-size: 5px 5px;
+    animation: moveStars 50s linear infinite;
+}
+
+.stars::before {
+    top: 0;
+    left: 0;
+}
+
+.stars::after {
+    top: 50%;
+    left: 50%;
+    animation-duration: 100s;
+}
+
+@keyframes moveStars {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-50%, -50%);
+    }
+}
+        .name-bg {
+            background: rgb(161, 182, 135);
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+        .hidden-section {
+            display: none;
+        }
+        .content-box {
+            background: rgb(50, 54, 71);
+            height: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: absolute;
+            top: 15%;
+            right: 10%;
+        }
+        .content-text {
+            position: relative;
+            z-index: 1;
+        }
+        .nav-button, .contact-button {
+            background: rgba(255, 255, 255, 0.356);
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover, .contact-button:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+        .image-hover-effect {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .image-hover-effect:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        /* From Uiverse.io by gharsh11032000 */ 
+.card {
+    .my-class {
+    position: relative;
+}
+
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 125%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+@media screen and (max-width: 1024px) {
+    .content-box {
+        width: 80%;
+        right: 5%;
+        top: 20%;
+    }
+    .card {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        right: 5%;
+        top: 25%;
+    }
+    .content-text {
+        margin-bottom: 15px;
+    }
+    .card {
+        width: 220px;
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content-box {
+        width: 95%;
+        right: 2.5%;
+        top: 30%;
+    }
+    .card {
+        width: 200px;
+        height: 140px;
+    }
+    .image-hover-effect {
+        width: 100%;
+    }
+    .nav-button, .contact-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+#whatsapp-channel {
+        padding: 3rem;
+        background-color: #1a202c;
+        text-align: center;
+        color: white;
+    }
+    .channel-container {
+        max-width: 768px;
+        margin: auto;
+        background: #2d3748;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    #whatsapp-channel h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #facc15;
+        margin-bottom: 1rem;
+    }
+    #whatsapp-channel p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    #whatsapp-link {
+        background-color: #22c55e;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+    }
+    #whatsapp-link:hover {
+        background-color: #16a34a;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+    body {
+        background-color: #111;
+        color: white;
+        font-family: 'Cairo', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .skills {
+        padding: 40px 20px;
+    }
+
+    .skills h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: orange;
+    }
+
+    .skills-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        font-weight: bold;
+        background: conic-gradient(orange 0%, #222 0%);
+        box-shadow: 0 0 15px rgba(255, 165, 0, 0.7), 0 0 30px rgba(255, 165, 0, 0.5);
+        position: relative;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .circle:hover {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 1), 0 0 40px rgba(255, 165, 0, 0.9);
+        transform: scale(1.1);
+    }
+
+    .circle::after {
+        content: attr(data-percent) '%';
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .skill p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    /* From Uiverse.io by ayman-ashine */ 
+.card {
+  --dark: #212121;
+  --darker: #111111;
+  --semidark: #2c2c2c;
+  --lightgray: #e8e8e8;
+  --unit: 10px;
+
+  background-color: var(--darker);
+  box-shadow: 0 0 var(--unit) var(--darker);
+  border: calc(var(--unit) / 2) solid var(--darker);
+  border-radius: var(--unit);
+  position: relative;
+  padding: var(--unit);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 20%;
+  top: 40%;
+  left: -10%;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  animation: keyframes-floating-light 2.5s infinite ease-in-out;
+  filter: blur(20px);
+}
+
+@keyframes keyframes-floating-light {
+  0% {
+    transform: rotate(-5deg) translateY(-5%);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: rotate(5deg) translateY(5%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-5deg) translateY(-5%);
+    opacity: 0.5;
+  }
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  filter: blur(20px);
+  pointer-events: none;
+  animation: keyframes-intro 1s ease-in forwards;
+}
+
+@keyframes keyframes-intro {
+  100% {
+    ransform: translate(-100%);
+    opacity: 0;
+  }
+}
+
+.card .image {
+  width: 200px;
+  animation: keyframes-floating-img 10s ease-in-out infinite;
+}
+
+@keyframes keyframes-floating-img {
+  0% {
+    transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate(2%, -2%) scaleY(1) rotate(5deg);
+  }
+
+  100% {
+    transform: translate(-2%, 2%) scaleY(0.95) rotate(-5deg);
+  }
+}
+
+.card .heading {
+  font-weight: 600;
+  font-size: small;
+  text-align: center;
+  margin-top: calc(var(--unit) * -2);
+  padding-block: var(--unit);
+  color: var(--lightgray);
+  animation: keyframes-flash-text 0.5s infinite;
+}
+
+@keyframes keyframes-flash-text {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.card .icons {
+  display: flex;
+  gap: var(--unit);
+}
+
+.card .icons a {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark);
+  color: var(--lightgray);
+  padding: calc(var(--unit) / 2);
+  border-radius: calc(var(--unit) / 2);
+}
+
+.card .icons a:hover {
+  transition: 0.2s;
+  background-color: var(--semidark);
+}
+.social-media-section {
+    display: flex;
+    justify-content: center; /* توسيط العنصر أفقيًا */
+    align-items: center; /* توسيط العنصر عموديًا */
+    height: 100vh; /* جعل الكارت في منتصف الشاشة */
+}
+.videos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .video-box {
+            width: 320px;
+            height: 180px;
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        /* تنسيق الزر */
+#showVideosBtn {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #737373; /* خلفية رمادية */
+    color: white; /* لون النص أبيض */
+    border: none;
+    cursor: pointer;
+    border-radius: 12px; /* حواف دائرية */
+    transition: 0.3s;
+    margin: -3px;
+    display: block;
+    width: 80px; /* جعل الزر مستطيلاً */
+    text-align: center;
+}
+
+#showVideosBtn:hover {
+    background-color: #666; /* تغيير لون الزر عند التمرير */
+}
+
+/* تصميم قسم الفيديوهات */
+#videosSection {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* تصميم كل فيديو */
+.video-container {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #564a6e, #ff6600);
+    box-shadow: 0 0 15px rgba(96, 104, 126, 0.8);
+    width: 280px; /* حجم ثابت للإطار */
+}
+
+/* الفيديو */
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+/* المقال أسفل الفيديو */
+.video-container p {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+/* From Uiverse.io by Hashir-Ahmed123 */ 
+@keyframes drop {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.lava-lamp {
+  position: relative;
+  width: 50px;
+  height: 100px;
+  background: #000;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #e64980, #ff8787);
+  border-radius: 50%;
+  left: 15px;
+  animation: drop 5s ease-in-out infinite;
+}
+.bubble1 {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #82c91e, #3bc9db);
+  border-radius: 50%;
+  left: 1px;
+  animation: drop 3s ease-in-out infinite;
+}
+.bubble2 {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #7950f2, #f783ac);
+  border-radius: 50%;
+  left: 30px;
+  animation: drop 4s ease-in-out infinite;
+}
+.bubble3 {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #4481eb, #04befe);
+  border-radius: 50%;
+  left: 20px;
+  animation: drop 6s ease-in-out infinite;
+}
+
+
+    </style>
+    <script>
+        function smoothScroll(targetId) {
+            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+        }
+        function showContact() {
+            let contactSection = document.getElementById("contact-section");
+            contactSection.style.display = "block";
+            smoothScroll("#contact-section");
+        }
+        function showQRCode() {
+            let qrCode = document.getElementById("whatsapp-qrcode");
+            qrCode.classList.toggle("hidden-section");
+            qrCode.scrollIntoView({ behavior: 'smooth' });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+    var button = document.getElementById("showVideosBtn");
+    var section = document.getElementById("videosSection");
+
+    button.addEventListener("click", function () {
+        section.style.display = "block"; // فتح القسم إذا كان مخفيًا
+
+        // التمرير إلى القسم بسلاسة
+        section.scrollIntoView({ behavior: "smooth" });
+    });
+});
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="p-6 flex justify-between items-center bg-gray-800">
+        <h1 class="text-2xl font-bold name-bg">فريد</h1>
+        <nav>
+            <ul class="flex gap-4">
+                <li><button onclick="smoothScroll('#about')" class="nav-button">عني</button></li>
+                <li><button onclick="showContact()" class="contact-button">تواصل معي</button></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative">
+        <div class="content-box w-2/3">
+            <div class="content-text text-right">
+                <h2 class="text-4xl font-bold mb-4">مرحبًا، أنا <span class="text-yellow-400">فريد</span></h2>
+                <p class="text-lg mb-6">مطور مواقع ويب، شغوف بتطوير الويب وبناء مشاريع احترافية</p>
+            </div>
+            <section>
+            <!-- From Uiverse.io by gharsh11032000 --> 
+<div class="card">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>
+    <div class="card__content">
+      <p class="card__title">ابدأ الوقتي
+      </p><p class="card__description">لازم تبدأ تتعلم أي مهارة مفيدة الوقتي من غير تأجيل. 
+        لإن لو فضلت تأجل كتيير مش هتعمل حاجه وهتضيع وقت هيفيدك في المستقبل.
+</p>
+    </div>
+  </div>
+ 
+  
+            </section>
+          
+            </div>
+        </section>
+        
+    </body>
+    </html>
+    
+    
+    
+    
+        </div>
+    </section>
+    <section id="about" class="p-12 bg-gray-800">
+        <h2 class="text-3xl font-bold mb-4 text-yellow-400">عني</h2>
+        <p class="text-lg">انا <span class="text-yellow-400"> فريد حسن,</span> .عمري 17 سنة
+                        <br> شغوف بتصميم وتطوير المواقع وتحديدا الواجهة الاماميه
+            <br>هدفي هو التخصص في برمجة المواقع تحديدا <span class="text-yellow-400"> .( FULL-STACK )</span>
+            <br>بدات رحلة تعلمي في البرمجه منذ سنة 
+            <br>تعلمت في هذه الرحلة الكثير عن البرمجة ومازلت اتعلم لاصبح مبرمج محترف
+        </p>
+    </section>
+    <section class="skills">
+        <h2>مهاراتي</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="circle" data-percent="95"></div>
+                <p>HTML</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percent="90"></div>
+                <p>CSS</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percent="95"></div>
+                <p>JavaScript</p>
+            </div>
+            
+        </div>
+    </section>
+    <section id="whatsapp-channel" class="p-12 bg-gray-900 text-center text-white">
+        <div class="max-w-3xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-yellow-400 mb-4">دليلك اليومي لحياة افضل</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                في عالم مليء بالمعلومات والضغوط اليومية، أصبح من الصعب الوصول إلى نصائح مفيدة وعملية تساعدنا على تحسين حياتنا واتخاذ قرارات صحيحة. لهذا السبب، أطلق <span class="text-yellow-400"> محمد محمود</span> قناة واتساب للنصائح، حيث تقدم لك خلاصة التجارب والمعلومات المفيدة بطريقة بسيطة وسريعة، مباشرة على هاتفك!
+
+ماذا تقدم  القناة؟
+<br>
+<li>✅ نصائح يومية متنوعة: في مجالات مختلفة مثل تطوير الذات، الإنتاجية، الصحة، والعلاقات الاجتماعية.</li>
+<br>
+<li>✅ أفكار ملهمة: تساعدك على تحقيق أهدافك وزيادة ثقتك بنفسك.</li>
+<br>
+<li>✅ طرق مبتكرة لحل المشكلات: لأنه يؤمن أن كل مشكلة لها حل إذا تم التفكير فيها بطريقة صحيحة.</li>
+
+            </p>
+            <a href="https://chat.whatsapp.com/FEwZvuLBo8C9NAUqhRaBn9" id=" #whatsapp-link" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition-all duration-300">
+                 قناة الواتس
+            </a>
+        </div>
+    </section>
+
+    
+   
+    
+   
+   <section id="contact-section" class="p-12 bg-gray-800 text-center hidden-section">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">تواصل معي</h2>
+    <div class="mt-6">
+        <button onclick="showQRCode()" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600">تواصل عبر واتساب</button>
+        <div id="whatsapp-qrcode" class="hidden-section mt-4">
+            <p>امسح الباركود للتواصل عبر واتساب:</p>
+            <img src="c:\Users\ASUS\Desktop\farid hassan\images\IMG-20250214-WA0002.jpg" alt="باركود واتساب" class="mx-auto mt-2 w-32">
+        </div>
+    </div>
+</section>
+
+    
+        <!-- From Uiverse.io by ayman-ashine --> 
+    <footer class="text-center p-4 bg-gray-900 mt-6">
+        <p>&copy; 2025 جميع الحقوق محفوظة - فريد</p>
+    </footer>
+    <script>  function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        if (username && password) {
+            sessionStorage.setItem("loggedIn", true); // حفظ تسجيل الدخول
+            window.location.href = "index.html"; // تحويل المستخدم
+        } else {
+            alert("يرجى إدخال اسم المستخدم وكلمة المرور!");
+        }
+    }</script>
+    
+
+</body>
+</html>                                                                                                   
